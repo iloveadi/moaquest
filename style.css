@@ -30,7 +30,12 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     line-height: 1.2;
@@ -68,7 +73,6 @@ header {
     color: var(--text-color);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
 }
 
 .logo-accent {
@@ -244,7 +248,8 @@ header {
     overflow: hidden;
 }
 
-.comparison-table th, .comparison-table td {
+.comparison-table th,
+.comparison-table td {
     padding: 1.5rem;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
@@ -273,7 +278,7 @@ header {
 }
 
 .coupon-box {
-    background: linear-gradient(135deg, rgba(0,123,255,0.2) 0%, rgba(0,123,255,0.05) 100%);
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.2) 0%, rgba(0, 123, 255, 0.05) 100%);
     border: 1px dashed var(--primary-color);
     padding: 2rem;
     border-radius: 16px;
@@ -319,8 +324,15 @@ footer {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
@@ -328,6 +340,7 @@ footer {
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .hero h1 {
         font-size: 3rem;
     }
@@ -337,13 +350,17 @@ footer {
     .card-grid {
         grid-template-columns: 1fr;
     }
+
     .hero h1 {
         font-size: 2.5rem;
     }
+
     .comparison-table {
         font-size: 0.9rem;
     }
-    .comparison-table th, .comparison-table td {
+
+    .comparison-table th,
+    .comparison-table td {
         padding: 1rem 0.5rem;
     }
 }
