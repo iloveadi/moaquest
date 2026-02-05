@@ -143,86 +143,91 @@ header {
     box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
 }
 
-/* Quest Board */
-.quest-board {
+/* Benefit Board (Referral List) */
+.benefit-board {
     padding: var(--spacing-lg) 0;
+    max-width: 900px;
+    /* Limit width for better readability */
+    margin: 0 auto;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-}
-
-.section-title span {
-    color: var(--accent-color);
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.quest-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 2rem;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+.benefit-list {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+    gap: 1.5rem;
 }
 
-.quest-card:hover {
-    transform: translateY(-10px);
+.benefit-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    gap: 1.5rem;
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
     border-color: var(--primary-color);
-    box-shadow: var(--glass-shadow);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card-tag {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: var(--accent-color);
-    color: #000;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    text-transform: uppercase;
+.card-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 200px;
 }
 
-.card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+.service-icon {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
 }
 
-.quest-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.quest-card p {
-    color: var(--text-muted);
-    margin-bottom: 2rem;
+.card-center {
     flex-grow: 1;
 }
 
-.card-link {
-    font-weight: 600;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.benefit-highlight {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.4rem;
 }
 
-.card-link:hover {
-    gap: 0.8rem;
+.benefit-tip {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    background: rgba(0, 123, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.card-action {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.card-action:hover {
+    background: var(--primary-hover);
 }
 
 /* Promotion Section */
@@ -337,22 +342,35 @@ footer {
 
 /* Responsive */
 @media (max-width: 992px) {
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .hero h1 {
         font-size: 3rem;
     }
 }
 
 @media (max-width: 768px) {
-    .card-grid {
-        grid-template-columns: 1fr;
+    .benefit-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1.2rem;
+    }
+
+    .card-left {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-center {
+        width: 100%;
+    }
+
+    .card-action {
+        width: 100%;
+        text-align: center;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .comparison-table {
