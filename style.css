@@ -397,6 +397,68 @@ footer {
     padding-bottom: 2rem;
 }
 
+/* Partner Banners */
+.partner-banners {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+}
+
+.banner-track {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.banner-item {
+    background: #fff;
+    color: #333;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: all 0.2s;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.banner-item strong {
+    font-weight: 900;
+    margin-right: 4px;
+    color: #000;
+}
+
+.banner-item:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.banner-item.disabled {
+    background: #ccc;
+    cursor: default;
+    opacity: 0.5;
+}
+
+.banner-item.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Footer override */
+footer {
+    padding-top: 1rem;
+    border-top: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header-message {
@@ -420,4 +482,10 @@ footer {
         width: 100%;
         height: 1px;
     }
+
+    .banner-item {
+        width: 45%;
+    }
+
+    /* 2 per row on mobile */
 }
