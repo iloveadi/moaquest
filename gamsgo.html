@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamsGo | 넷플릭스, 유튜브 프리미엄 최저가 - 모아퀘스트</title>
+    <meta name="description" content="GamsGo(겜스고)에서 넷플릭스, 유튜브 프리미엄을 최대 70% 할인된 가격으로 이용하는 방법. 안전성과 사용법 가이드.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="nav-logo">
+                    <span>모아</span><span class="logo-accent">퀘스트</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Detail Content -->
+    <main class="detail-container container">
+
+        <!-- Hero / Intro -->
+        <section class="detail-hero">
+            <div class="service-icon-large">📺</div>
+            <h1>GamsGo (겜스고)</h1>
+            <p class="detail-subtitle">넷플릭스, 유튜브 프리미엄을 커피 한 잔 값으로?</p>
+            <div class="tag-list">
+                <span class="tag">자동 갱신</span>
+                <span class="tag">즉시 환불 보장</span>
+                <span class="tag">5년 운영 신뢰</span>
+            </div>
+        </section>
+
+        <!-- What is GamsGo -->
+        <section class="detail-section">
+            <h2>💡 그게 뭔데 이렇게 싸요?</h2>
+            <p>
+                OTT 서비스(넷플릭스 등)의 <strong>'가족 공유(패밀리 플랜)'</strong> 기능을 활용해 여러 명이서 요금을 나눠 내는
+                <strong>'계정 공유 플랫폼'</strong>입니다.<br>
+                복잡하게 사람 모을 필요 없이, GamsGo가 알아서 매칭해주니 우리는 돈만 내면 바로 쓸 수 있죠.
+            </p>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="detail-section">
+            <h2>💰 가격 비교 (월 기준)</h2>
+            <table class="detail-table">
+                <thead>
+                    <tr>
+                        <th>서비스</th>
+                        <th>정가 (한국)</th>
+                        <th>GamsGo 할인가</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>유튜브 프리미엄</strong></td>
+                        <td>약 14,900원</td>
+                        <td><span class="price-accent">약 4,000원</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>넷플릭스 (4K)</strong></td>
+                        <td>17,000원</td>
+                        <td><span class="price-accent">약 4,500원</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ChatGPT Plus</strong></td>
+                        <td>약 29,000원</td>
+                        <td><span class="price-accent">약 9,000원</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="caption">* 환율에 따라 소폭 변동될 수 있습니다.</p>
+        </section>
+
+        <!-- Promo Code -->
+        <section class="detail-section promo-box">
+            <h3>🎁 모아퀘스트 독점 추가 할인</h3>
+            <p>결제 시 아래 코드를 입력하면 <strong>추가 할인</strong>을 받을 수 있습니다.</p>
+
+            <div class="code-display" onclick="copyCode()">
+                <span id="promoCode">MOAQUEST</span>
+                <span class="copy-icon">📋 복사</span>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="detail-cta">
+            <a href="https://www.gamsgo.com/partner/WkWPZ" target="_blank" class="cta-button">
+                최저가로 지금 시작하기 →
+            </a>
+            <p class="cta-subtext">위 링크를 통해 가입 시 할인 코드가 자동 적용될 수 있습니다.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" style="opacity: 0.5;">
+            <p style="font-size: 0.8rem;">&copy; 2026 모아퀘스트. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function copyCode() {
+            const code = document.getElementById('promoCode').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('할인 코드(MOAQUEST)가 복사되었습니다!');
+            });
+        }
+    </script>
+</body>
+
+</html>
