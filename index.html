@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moa.quest | 구독과 쇼핑의 혜택을 연결하다</title>
+    <meta name="description" content="넷플릭스, 유튜브 프리미엄 최저가 할인 정보와 쿠팡 핫딜을 한곳에 모았습니다.">
+    <!-- Open Graph tags for better social sharing -->
+    <meta property="og:title" content="moa.quest | 혜택을 찾는 퀘스트">
+    <meta property="og:description" content="스마트한 당신을 위한 구독 & 쇼핑 최적화 솔루션">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://moa.quest">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="nav-logo">
+                    <span>moa</span><span class="logo-accent">.quest</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Beta Now Live</span>
+            <h1>모든 구독과 쇼핑의<br>혜택을 연결하다</h1>
+            <p>매달 나가는 고정비, 이제 스마트하게 줄이세요.<br>검증된 플랫폼의 최저가 혜택을 큐레이션 해드립니다.</p>
+            <a href="https://www.gamsgo.com/partner/WkWPZ" target="_blank" class="cta-button">Start Quest →</a>
+        </div>
+    </section>
+
+    <!-- Quest Board Section -->
+    <section class="quest-board container">
+        <h2 class="section-title">Daily <span>Quests</span></h2>
+        
+        <div class="card-grid">
+            <!-- Card 1: GamsGo -->
+            <div class="quest-card">
+                <span class="card-tag">Hot</span>
+                <div class="card-icon">📺</div>
+                <h3>OTT 구독료 70% 절약</h3>
+                <p>넷플릭스, 유튜브 프리미엄을 커피 한 잔 값으로 이용하세요. GamsGo 공식 파트너 할인.</p>
+                <a href="https://www.gamsgo.com/partner/WkWPZ" target="_blank" class="card-link">공략 확인하기 <span>→</span></a>
+            </div>
+
+            <!-- Card 2: Coupang -->
+            <div class="quest-card">
+                <span class="card-tag">Deal</span>
+                <div class="card-icon">📦</div>
+                <h3>오늘의 쿠팡 최저가</h3>
+                <p>지금 가장 핫한 로켓배송 상품과 실시간 골드박스 타임 혜택을 놓치지 마세요.</p>
+                <a href="https://link.coupang.com/a/bMpP8n" target="_blank" class="card-link">아이템 획득하기 <span>→</span></a>
+            </div>
+
+            <!-- Card 3: Event -->
+            <div class="quest-card">
+                <div class="card-icon">⚡</div>
+                <h3>한정수량 이벤트</h3>
+                <p>선착순으로 제공되는 특별한 혜택! 준비된 수량이 소진되기 전에 참여하세요.</p>
+                <a href="#" class="card-link" onclick="alert('준비 중인 퀘스트입니다!')">참여 신청하기 <span>→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Section -->
+    <section class="promotion">
+        <div class="container promo-container">
+            <h2 class="section-title">Price <span>Comparison</span></h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>서비스</th>
+                        <th>정가 (월)</th>
+                        <th>moa.quest (월)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>유튜브 프리미엄</td>
+                        <td class="strikethrough">₩14,900</td>
+                        <td class="price-highlight">₩4,000~</td>
+                    </tr>
+                    <tr>
+                        <td>넷플릭스 4K</td>
+                        <td class="strikethrough">₩17,000</td>
+                        <td class="price-highlight">₩5,000~</td>
+                    </tr>
+                    <tr>
+                        <td>스포티파이</td>
+                        <td class="strikethrough">₩10,900</td>
+                        <td class="price-highlight">₩2,500~</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="coupon-box">
+                <p style="color:var(--text-muted); margin-bottom:0.5rem;">GamsGo 추가 할인 코드</p>
+                <div id="promoCode" class="coupon-code">MOAQUEST</div>
+                <button class="copy-btn" onclick="copyCode()">복사하기</button>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-top:1rem;">*결제 시 프로모션 코드란에 입력하세요.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 moa.quest. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">
+                이 포스팅은 제휴 마케팅 활동의 일환으로,<br>이에 따른 일정액의 수수료를 제공받을 수 있습니다.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
