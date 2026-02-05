@@ -492,6 +492,72 @@ footer {
         height: 1px;
     }
 
+    /* Links Page Styles */
+    .page-title-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .page-title {
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        color: #fff;
+        text-shadow: 0 0 20px var(--accent-glow);
+        margin-bottom: 0.5rem;
+    }
+
+    .page-desc {
+        color: #888;
+    }
+
+    .back-link {
+        font-family: var(--font-display);
+        font-size: 0.9rem;
+        color: var(--accent-blue);
+        border: 1px solid var(--accent-blue);
+        padding: 0.3rem 0.8rem;
+        border-radius: 4px;
+        transition: all 0.2s;
+    }
+
+    .back-link:hover {
+        background: var(--accent-blue);
+        color: #000;
+    }
+
+    .full-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    /* Portal Button on Index */
+    .portal-section {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .portal-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid #444;
+        padding: 1.5rem 3rem;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+    }
+
+    .portal-btn:hover {
+        border-color: var(--accent-blue);
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .portal-icon {
+        font-size: 1.5rem;
+    }
+
     .banner-item {
         width: 45%;
     }
