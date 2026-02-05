@@ -391,214 +391,304 @@ footer {
     }
 }
 
-/* Detail Page Styles (Premium Polish) */
+/* Detail Page Styles (God Life Tarot Edition) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
 .detail-container {
     padding-top: 120px;
     padding-bottom: 80px;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Background Atmosphere */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% -20%, #2a0a4a 0%, #0d0d1a 60%, #000000 100%);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .detail-hero {
     text-align: center;
-    margin-bottom: 4rem;
-    padding: 3rem 1rem;
-    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.15) 0%, transparent 70%);
+    margin-bottom: 5rem;
+    position: relative;
+    padding: 4rem 1rem;
+}
+
+.detail-hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
     border-radius: 50%;
-    margin-top: -2rem;
+    z-index: -1;
+    animation: pulseGlow 4s infinite alternate;
 }
 
 .service-icon-large {
     font-size: 5rem;
     margin-bottom: 1.5rem;
     display: inline-block;
-    filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.4));
-    animation: fadeIn 0.8s ease-out;
+    filter: drop-shadow(0 0 25px rgba(186, 133, 255, 0.6));
+    animation: float 3s ease-in-out infinite;
 }
 
 .detail-hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #fff 0%, #a5c9ff 100%);
+    font-family: 'Cinzel', serif;
+    /* Mystical serif font */
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(to bottom, #fff 0%, #e0c3fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(224, 195, 252, 0.3);
 }
 
 .detail-subtitle {
-    font-size: 1.3rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #b8b8d0;
+    margin-bottom: 2.5rem;
     font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .tag-list {
     display: flex;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
 .tag {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
+    background: rgba(42, 10, 74, 0.4);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 0.5rem 1.2rem;
     border-radius: 50px;
-    font-size: 0.95rem;
-    color: #fff;
+    font-size: 0.9rem;
+    color: #ffd700;
     backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Mystical Sections */
 .detail-section {
-    margin-bottom: 3rem;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-    padding: 2.5rem;
+    margin-bottom: 4rem;
+    background: rgba(13, 13, 26, 0.6);
+    padding: 3rem;
     border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.5), transparent);
 }
 
 .detail-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.detail-section h2::before {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 24px;
-    background: var(--accent-color);
-    border-radius: 3px;
-}
-
-/* Premium Table */
+/* Tarot Card Style Table */
 .detail-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 0.8rem;
-    margin-top: 0.5rem;
+    border-spacing: 0 1rem;
+    margin-top: 1rem;
 }
 
 .detail-table th {
-    color: var(--text-muted);
+    color: #8b8bacee;
     font-weight: 600;
     padding: 1rem;
-    text-align: left;
+    text-align: center;
     border: none;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .detail-table tr {
-    transition: transform 0.2s;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.detail-table tr:hover td {
-    background: rgba(255, 255, 255, 0.08);
+.detail-table tr:hover {
+    transform: scale(1.02);
 }
 
 .detail-table td {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 1.2rem 1rem;
-    border: none;
+    background: linear-gradient(145deg, rgba(40, 20, 60, 0.4) 0%, rgba(20, 10, 30, 0.4) 100%);
+    padding: 1.5rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: #e0e0e0;
 }
 
 .detail-table td:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     font-weight: 700;
     color: #fff;
+    text-align: left;
+    padding-left: 2rem;
 }
 
 .detail-table td:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
 
 .price-accent {
-    color: var(--accent-color);
+    color: #ffd700;
     font-weight: 700;
-    font-size: 1.2rem;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 
-/* Golden Coupon Box */
+/* Golden Ticket Promo */
 .promo-box {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(135deg, rgba(20, 10, 20, 0.8) 0%, rgba(10, 5, 10, 0.9) 100%);
     border: 1px solid rgba(255, 215, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-
-.promo-box::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    box-shadow: inset 0 0 30px rgba(255, 215, 0, 0.05);
 }
 
 .code-display {
     background: #000;
-    border: 2px dashed var(--accent-color);
-    padding: 1rem 3rem;
-    border-radius: 12px;
+    border: 2px solid #ffd700;
+    padding: 1.2rem 3rem;
+    border-radius: 8px;
     display: inline-flex;
     align-items: center;
     gap: 1.5rem;
     margin-top: 1.5rem;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+}
+
+.code-display::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
 }
 
 .code-display:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.2);
-    border-style: solid;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
 }
 
 #promoCode {
-    font-size: 1.8rem;
-    font-weight: 800;
-    font-family: 'Outfit', sans-serif;
-    letter-spacing: 2px;
-    color: var(--accent-color);
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffd700;
+    z-index: 1;
 }
 
 .copy-icon {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #000;
-    background: var(--accent-color);
+    background: #ffd700;
     padding: 0.3rem 0.8rem;
-    border-radius: 20px;
+    border-radius: 4px;
     font-weight: 700;
+    z-index: 1;
 }
 
 /* CTA */
 .detail-cta {
-    margin-top: 4rem;
+    margin-top: 5rem;
     text-align: center;
 }
 
 .detail-cta .cta-button {
-    font-size: 1.3rem;
-    padding: 1.2rem 4rem;
-    background: linear-gradient(90deg, var(--primary-color), var(--primary-hover));
-    box-shadow: 0 10px 40px rgba(0, 123, 255, 0.4);
+    font-family: 'Orbitron', 'Cinzel', sans-serif;
+    /* Tech + Magic mix */
+    font-size: 1.5rem;
+    padding: 1.5rem 5rem;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000;
+    font-weight: 800;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+    letter-spacing: 1px;
 }
 
 .detail-cta .cta-button:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 15px 50px rgba(0, 123, 255, 0.5);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.7);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+    from {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    to {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-150%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(150%) rotate(45deg);
+    }
 }
 
 /* Secondary Button & Card Actions */
