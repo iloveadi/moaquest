@@ -1,3 +1,15 @@
+/* Reset & Base */
+:root {
+    --bg-color: #0a0a0f;
+    --card-bg: #14141f;
+    --text-color: #e0e0e0;
+    --accent-blue: #00f0ff;
+    --accent-glow: rgba(0, 240, 255, 0.4);
+    --border-color: #2a2a3a;
+    --font-main: 'Pretendard', sans-serif;
+    --font-display: 'Orbitron', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +17,357 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Grid Background Effect */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utilities */
+.text-blue {
+    color: var(--accent-blue) !important;
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Header */
+.game-header {
+    background: rgba(10, 10, 15, 0.9);
+    border-bottom: 2px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.header-message {
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    font-weight: 600;
+    background: rgba(0, 240, 255, 0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+/* Quest Board Layout */
+.quest-board {
+    margin-top: 100px;
+    /* Header offset */
+    padding-bottom: 5rem;
+}
+
+/* Main Quest Card */
+.main-quest {
+    margin-bottom: 3rem;
+}
+
+.quest-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    /* Angular gaming look */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main-card {
+    border: 1px solid var(--accent-blue);
+    box-shadow: 0 0 20px var(--accent-glow);
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.main-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
+}
+
+.quest-visual {
+    width: 100%;
+    height: 300px;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.quest-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.quest-badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: var(--accent-blue);
+    color: #000;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-display);
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.quest-content {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.quest-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-display);
+    letter-spacing: -0.5px;
+}
+
+.highlight {
+    color: var(--accent-blue);
+    position: relative;
+    display: inline-block;
+}
+
+.quest-desc {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.quest-rewards {
+    display: flex;
     justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    color: #333;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.reward-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.reward-item .label {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+
+.reward-item .value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.reward-icon {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+}
+
+.quest-btn {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: #000;
+    font-family: var(--font-display);
+    font-weight: 900;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    transition: all 0.2s;
+    position: relative;
+}
+
+.quest-btn:hover {
+    background: #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Sub Quests */
+.section-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    border-left: 3px solid var(--accent-blue);
+    padding-left: 1rem;
+}
+
+.quest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.sub-card {
+    padding: 2rem;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(20, 20, 31, 0.5);
+    border: 1px dashed #444;
+}
+
+.sub-card:hover {
+    opacity: 0.8;
+    border-color: #666;
+}
+
+.lock-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.sub-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.sub-card p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Trust Dashboard */
+.trust-dashboard {
+    margin-bottom: 2rem;
+}
+
+.dashboard-panel {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
+    border-top: 2px solid var(--accent-blue);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.dashboard-panel::before {
+    content: 'STATUS_MONITOR';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: var(--bg-color);
+    padding: 0 5px;
+    color: var(--accent-blue);
+    font-size: 0.7rem;
+    font-family: var(--font-display);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stat-value.active {
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #444;
+    font-size: 0.8rem;
+    padding-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-message {
+        display: none;
+    }
+
+    .quest-visual {
+        height: 200px;
+    }
+
+    .quest-title {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-panel {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .stat-divider {
+        width: 100%;
+        height: 1px;
+    }
 }

@@ -4,13 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모아퀘스트</title>
+    <title>moa.quest | 상부상조 혜택 공유</title>
+    <meta name="description" content="모르면 손해, 경유하면 보너스! 겜스고, Suno AI 등 다양한 서비스의 혜택을 상부상조하는 퀘스트 보드입니다.">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>MoaQuest</h1>
-    <p>새로운 시작을 기다리고 있습니다.</p>
+
+    <!-- Header -->
+    <header class="game-header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-text">MOA.QUEST</span>
+            </div>
+            <div class="header-message">
+                모르면 손해, 경유하면 보너스!
+            </div>
+        </div>
+    </header>
+
+    <main class="quest-board container">
+
+        <!-- Main Quest Section -->
+        <section class="main-quest">
+            <div class="quest-card main-card">
+                <div class="quest-visual">
+                    <img src="quest_card_hero.png" alt="Suno AI x GamsGo Quest">
+                    <div class="quest-badge">MAIN QUEST</div>
+                </div>
+                <div class="quest-content">
+                    <h1 class="quest-title">Suno AI 이용권 <span class="highlight">+4일</span> 보너스 퀘스트</h1>
+                    <p class="quest-desc">
+                        그냥 가입하면 0일! <br>
+                        <strong>moa.quest 전용 링크</strong>로 GamsGo 가입 시,<br>
+                        가입자와 운영자 모두에게 <span class="text-blue">서비스 이용 기간 +4일 혜택</span>이 즉시 적립됩니다.
+                    </p>
+                    <div class="quest-rewards">
+                        <div class="reward-item">
+                            <span class="label">운영자 보상</span>
+                            <span class="value">+4 Days</span>
+                        </div>
+                        <div class="reward-icon">🤝</div>
+                        <div class="reward-item">
+                            <span class="label">참여자 보상</span>
+                            <span class="value">+4 Days</span>
+                        </div>
+                    </div>
+                    <a href="https://www.gamsgo.com/partner/WkWPZ" target="_blank" class="quest-btn">
+                        <span>[ +4일 혜택 받고 가입하러 가기 ]</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sub Quests Section -->
+        <section class="sub-quests">
+            <h2 class="section-title">ADDITIONAL QUESTS</h2>
+            <div class="quest-grid">
+                <!-- Placeholder 1 -->
+                <div class="quest-card sub-card locked">
+                    <div class="lock-icon">🔒</div>
+                    <h3>Coupang Partners</h3>
+                    <p>다음 혜택 준비 중...</p>
+                </div>
+                <!-- Placeholder 2 -->
+                <div class="quest-card sub-card locked">
+                    <div class="lock-icon">🔒</div>
+                    <h3>Secret Quest</h3>
+                    <p>Comming Soon</p>
+                </div>
+                <!-- Placeholder 3 -->
+                <div class="quest-card sub-card locked">
+                    <div class="lock-icon">🔒</div>
+                    <h3>Bonus Stage</h3>
+                    <p>준비 중</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Dashboard -->
+        <section class="trust-dashboard">
+            <div class="dashboard-panel">
+                <div class="stat-item">
+                    <span class="stat-label">SYSTEM STATUS</span>
+                    <span class="stat-value active">ONLINE</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">누적 혜택 공유 인원</span>
+                    <span class="stat-value count">154명</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">현재까지 모은 추가 보너스</span>
+                    <span class="stat-value count text-blue">612일</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MOA.QUEST - Mutual Benefit Platform</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 
