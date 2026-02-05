@@ -1,3 +1,12 @@
+// Force reload logic for logo
+document.querySelector('.nav-logo').addEventListener('click', function (e) {
+    e.preventDefault();
+    // Append timestamp to force browser to fetch a fresh version
+    const url = new URL(window.location.href);
+    url.searchParams.set('reload', new Date().getTime());
+    window.location.href = url.toString();
+});
+
 function copyCode() {
     const code = document.getElementById('promoCode').innerText;
     navigator.clipboard.writeText(code).then(() => {
@@ -5,7 +14,7 @@ function copyCode() {
         const originalText = btn.innerText;
         btn.innerText = '복사완료!';
         btn.style.background = '#28a745';
-        
+
         setTimeout(() => {
             btn.innerText = originalText;
             btn.style.background = '';
@@ -18,7 +27,7 @@ function copyCode() {
 // Add scroll reveal effect for cards
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.quest-card');
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
